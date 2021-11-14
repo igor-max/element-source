@@ -1,0 +1,26 @@
+@import './config.scss';
+
+@mixin b($block) {
+  $B: $namespace + '-' + $block;
+
+  .#{$B} {
+    @content;
+  }
+}
+
+@mixin e($element) {
+}
+
+@mixin m($modifier) {
+  $M: & + $modifier-separator + $modifier;
+
+  @at-root #{$M} {
+    @content;
+  }
+}
+
+@mixin when($state) {
+  @at-root &.#{$state-prefix + $state} {
+    @content;
+  }
+}
