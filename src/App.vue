@@ -1,41 +1,32 @@
 <template>
-  <div>
-    <div>
-      <el-link href="https://element.eleme.io" target="_blank"
-        >默认链接</el-link
-      >
-      <el-link type="primary">主要链接</el-link>
-      <el-link type="success">成功链接</el-link>
-      <el-link type="warning">警告链接</el-link>
-      <el-link type="danger">危险链接</el-link>
-      <el-link type="info">信息链接</el-link>
-    </div>
+  <div class="app">
+    <el-radio v-model="radio" name="lala" label="1">备选项</el-radio>
+    <el-radio v-model="radio" name="lala" label="2">备选项</el-radio>
 
-    <div>
-      <el-link disabled>默认链接</el-link>
-      <el-link type="primary" disabled>主要链接</el-link>
-      <el-link type="success" disabled>成功链接</el-link>
-      <el-link type="warning" disabled>警告链接</el-link>
-      <el-link type="danger" disabled>危险链接</el-link>
-      <el-link type="info" disabled>信息链接</el-link>
-    </div>
+    <el-radio disabled v-model="radio2" label="禁用">备选项</el-radio>
+    <el-radio disabled v-model="radio2" label="选中且禁用">备选项</el-radio>
 
-    <div>
-      <el-link :underline="false">无下划线</el-link>
-      <el-link>有下划线</el-link>
-    </div>
-
-    <div>
-      <el-link icon="el-icon-edit">编辑</el-link>
-      <el-link>查看<i class="el-icon-view el-icon--right"></i> </el-link>
-    </div>
+    <!-- <Test v-model='name' /> -->
   </div>
 </template>
 
 <script>
+import Test from "./test.vue";
 export default {
   name: "App",
+  components: { Test },
+  data() {
+    return {
+      radio: "1",
+      radio2: "选中且禁用",
+    };
+  },
   methods: {},
+  watch: {
+    radio(val) {
+      //  console.log(val)
+    },
+  },
 };
 </script>
 
