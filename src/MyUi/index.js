@@ -5,6 +5,7 @@ import ElButtonGroup from '@/MyUi/components/button/ButtonGroup';
 import ElRow from '@/MyUi/components/row';
 import ElCol from '@/MyUi/components/col';
 import ElLink from '@/MyUi/components/link';
+import ElUpload from '@/MyUi/components/upload';
 
 // form
 import ElRadio from '@/MyUi/components/radio';
@@ -14,6 +15,7 @@ Vue.component(ElButtonGroup.name, ElButtonGroup);
 Vue.component(ElRow.name, ElRow);
 Vue.component(ElCol.name, ElCol);
 Vue.component(ElLink.name, ElLink);
+Vue.component(ElUpload.name, ElUpload);
 
 // form 
 Vue.component(ElRadio.name, ElRadio);
